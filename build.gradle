@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.11.2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'com.codeborne:selenide:6.12.3'
+    testImplementation 'com.github.romankh3:image-comparison:4.4.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
